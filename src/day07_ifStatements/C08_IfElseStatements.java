@@ -15,5 +15,11 @@ public class C08_IfElseStatements {
         double kenar2 = scanner.nextDouble();
         double kenar3 = scanner.nextDouble();
 
+        if (kenar1 == kenar2 && kenar2 == kenar3 && kenar2>0){
+            System.out.println("Eskenar ucgen");
+        }else {
+            System.out.println("Eskenar ucgen degil");
+        }
+
     }
 }
