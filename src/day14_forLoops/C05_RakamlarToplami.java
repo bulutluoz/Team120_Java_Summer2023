@@ -11,20 +11,20 @@ public class C05_RakamlarToplami {
         System.out.println("Rakamlarini toplamak uzere pozitif bir tamsayi giriniz");
         int girilenSayi = scanner.nextInt();
 
-        int sayi = girilenSayi ;  // 1453
+        int sayi = girilenSayi;  // 1453
         int birlerBasmagi = 0;
-        int rakamlarToplami = 0 ;
+        int rakamlarToplami = 0;
 
-        int basamakSayisi = (sayi+"").length(); // 4
+        int basamakSayisi = (sayi + "").length(); // 4
 
-        for (int i = 1; i <=basamakSayisi ; i++) {
+        for (int i = 1; i <= basamakSayisi; i++) {
 
             birlerBasmagi = sayi % 10;
             rakamlarToplami += birlerBasmagi;
             sayi /= 10;
         }
 
-        System.out.println("Girilen " + girilenSayi +" sayisinin rakamlar toplami : " + rakamlarToplami);
+        System.out.println("Girilen " + girilenSayi + " sayisinin rakamlar toplami : " + rakamlarToplami);
 
     }
 }
