@@ -8,12 +8,6 @@ public class C07_EnUzunEnKisakelimeyazdir {
 
         String[] isimler = {"Resul","Omer","Mehmet","Ertugrul","Ozan","Suleyman"};
 
-
-
-
-
-
-
         enUzunEnKisaYazdir(isimler);
     }
 
