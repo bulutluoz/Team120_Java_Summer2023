@@ -17,6 +17,7 @@ public class C04_FibonacciSayisi {
 
 
     public static List<Integer> fibonacciListesiOlustur(int fibonacciSayiAdedi){
+
         List<Integer> fibonacciSerisi= new ArrayList<>();
         int ilk = 0;
         int ikinci = 1;
