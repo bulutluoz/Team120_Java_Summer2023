@@ -31,8 +31,8 @@ public class C02_LocalTime {
         System.out.println(time1.isBefore(time2)); // true
         System.out.println(time1.isAfter(time2)); // false
 
-        LocalTime time3 = LocalTime.now(ZoneId.of("ECT"));
-        System.out.println("Turkiye saati : " + time3);
+        LocalTime time3 = LocalTime.now(ZoneId.of("Europe/London"));
+        System.out.println("London saati : " + time3);
 
     }
 }
