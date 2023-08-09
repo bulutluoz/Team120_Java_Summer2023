@@ -1,25 +1,30 @@
 package day34_inheritance;
 
 public class EHayvanlar {
-    public void hareket(){
+
+    // Bir class olusturulurken
+    // ilerde child class'lar olabilir diye dusunuyorsaniz
+    // sadece child class'larin ulasmasini istediginiz method'lari
+    // protected access modifier ile olusturabilirsiniz
+    protected void hareket(){
         System.out.println("hareket ederler");
     }
 
-    public void solunum(){
+    protected void solunum(){
         System.out.println("nefes alirlar");
     }
 
-    public void beslenme(){
+    protected void beslenme(){
 
         System.out.println("beslenirler");
     }
 
-    public void cogalma(){
+    protected void cogalma(){
 
         System.out.println("cogalirlar");
     }
 
-    public void omur(){
+    protected void omur(){
 
         System.out.println("yasar ve olurler");
     }

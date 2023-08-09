@@ -1,6 +1,6 @@
 package day34_inheritance;
 
-public class GAvciKuslar {
+public class GAvciKuslar extends FKuslar{
     public void hareket() {
         System.out.println("ucarlar");
     }
