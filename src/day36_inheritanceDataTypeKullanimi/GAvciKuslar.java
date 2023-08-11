@@ -16,4 +16,6 @@ public class GAvciKuslar extends FKuslar{
     public void gaga() {
         System.out.println("sivri gagali");
     }
+
+
 }
