@@ -27,6 +27,11 @@ public class C01_ChildOfInterfaces implements I01_Interfaces, I02_Interfaces {
     }
 
     @Override
+    public void method44() {
+
+    }
+
+    @Override
     public void method4() {
 
     }
