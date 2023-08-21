@@ -17,4 +17,6 @@ public abstract class F_Hemsire extends D_Personel{
     public void standartMaas() {
         System.out.println("Tum hemsireler icin standart maas 20.000 TL");
     }
+
+
 }
