@@ -2,6 +2,7 @@ package day44_maps;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class MethodDeposu {
@@ -80,6 +81,44 @@ public class MethodDeposu {
                 System.out.println(valueArr[0] + " " + valueArr[1] + " "+ valueArr[2] + " "+ valueArr[3]);
             }
 
+        }
+    }
+
+    public static void numaraIleOgrenciBilgisiyazdirma(Map<Integer,String> ogrenciMap,int ogrenciNo){
+
+        String istenenOgrenciValue = ogrenciMap.get(ogrenciNo); // "Ali-Can-11-H-MF"
+
+        // numarasi verilen ogrencinin isim, soyisim, sinif ve subesini yazdirin
+
+        String[] istenenOgrenciArr = istenenOgrenciValue.split("-"); // // [Ali, Can, 11, H, MF]
+
+
+        System.out.println("Isim : " + istenenOgrenciArr[0]+ ", " +
+                           "Soyisim : " + istenenOgrenciArr[1]+ ", "+
+                            "Sinif : " + istenenOgrenciArr[2]+ ", "+
+                            "Sube : " + istenenOgrenciArr[3]);
+
+    }
+
+    public static void numaraliOgrenciListesiYazdir(Map<Integer,String> ogrenciMap){
+
+        // butun key'leri kaydedelim
+         Set<Integer> ogrenciKeySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106]
+
+        // bir for each loop ile tum key'leri elden gecirebilirim
+
+        for (Integer eachKey: ogrenciKeySeti
+             ) {
+
+            // her bir key
+            System.out.print(eachKey + " "); // 103
+
+            // ve o key'in isim ve soyismini yazdiralim
+
+            String valueStr= ogrenciMap.get(eachKey); // "Ali-Can-11-H-MF"
+            String[] valueArr = valueStr.split("-"); // [Ali, Can, 11, H, MF]
+
+            System.out.println(valueArr[0] + " " + valueArr[1]);
         }
     }
 }
