@@ -37,10 +37,12 @@ public class C03_ArraydenTekrarEdenleriSilme {
         System.out.println(tekrarsizSet); // [0, 1, 2, 3, 4, 5, 6]
 
         System.out.println(Arrays.toString(arr)); // [2, 4, 5, 6, 3, 4, 2, 1, 5, 6, 4, 3, 2, 3, 0, 1, 3, 4, 2, 5]
+
         // tekrarsiz elementleri Set olarak elde ettik
         // array'i set'deki elementlerden olusan hale donusturelim
 
         arr = new int[tekrarsizSet.size()];
+        System.out.println(Arrays.toString(arr)); // [0, 0, 0, 0, 0, 0, 0]
 
         int index=0;
         for (Integer each : tekrarsizSet
