@@ -57,10 +57,85 @@ public class MethodDeposu {
             //4- artik bir array ve icerisinde value'yu olusturan bilgiler mevcut
             //   istenen bilgiyi, array'den index ile alabiliriz
             String sinifStr = sinif+"";
+
             if (valueArr[2].equals(sinifStr) && valueArr[3].equalsIgnoreCase(sube)){
                 System.out.println(valueArr[0] + " " + valueArr[1]);
             }
         }
 
     }
+
+    public static void isimSoyisimIleOgrenciBul(Map<Integer,String> ogrenciMap, String isim, String soyisim){
+
+        Collection<String> valueCollection = ogrenciMap.values();
+
+        for (String eachValue: valueCollection  // "Ali-Can-11-H-MF"
+             ) {
+
+            String[] valueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+            // isim , soyisim, sinif ve subelerini yazdirin
+
+            if (valueArr[0].equalsIgnoreCase(isim) && valueArr[1].equalsIgnoreCase(soyisim)){
+
+                System.out.println(valueArr[0] + " " + valueArr[1] + " "+ valueArr[2] + " "+ valueArr[3]);
+            }
+
+        }
+    }
 }
+
+
+
+
+
+        /*
+        Elimizde map var
+        {
+        101=Ali-Can-11-H-MF,
+        102=Veli-Cem-10-K-TM,
+        103=Ali-Cem-11-K-TM,
+        104=Ayse-Can-10-H-MF,
+        105=Sevgi-Cem-11-M-TM,
+        106=Sevgi-Can-10-K-MF
+        }
+
+        1- bizden istenen bilgiler key'de mi yoksa value'da mi ?
+
+        [
+        Ali-Can-11-H-MF,
+        Veli-Cem-10-K-TM,
+        Ali-Cem-11-K-TM,
+        Ayse-Can-10-H-MF,
+        Sevgi-Cem-11-M-TM,
+        Sevgi-Can-10-K-MF
+        ]
+
+        2- value icerisindeki bilgilere rahat ulasabilmek icin
+           for each loop ile her bir value'yu alip split ile array'e cevirelim
+
+           [Ali, Can, 11, H, MF]
+
+         3- Eger sinif ve sube parametre olarak verilen ile ayni ise
+            isim ve soyismi yazdir
+
+
+         */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
