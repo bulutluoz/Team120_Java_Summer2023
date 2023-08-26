@@ -121,6 +121,55 @@ public class MethodDeposu {
             System.out.println(valueArr[0] + " " + valueArr[1]);
         }
     }
+
+    public static Map<Integer, String> yilSonuSinifArtir(Map<Integer, String> ogrenciMap) {
+
+        //map'de bir value'yu update etmek istersek
+         Set<Integer> ogrenciKeySeti  = ogrenciMap.keySet();
+
+         // for-each loop ile her bir key'e ait value'yu cagirip, istedigimiz update'i yapalim
+
+        for (Integer eachKey: ogrenciKeySeti
+             ) {
+
+            //   1- bilgiye ulasmak icin yaptigimiz gibi adim adim value'yu array'e cevirmeliyiz
+            //        - key ile value'yu cagiririz
+            String eachValue = ogrenciMap.get(eachKey); // // "Ali-Can-11-H-MF"
+            //        - value'yu array'e ceviririz
+            String[] valueArr = eachValue.split("-");
+            //        - array'de istedigimiz update'i yapariz // [Ali, Can, 11, H, MF]
+
+            switch (valueArr[2]){
+                case "9" :
+                   valueArr[2] ="10";
+                   break;
+                case "10" :
+                    valueArr[2] ="11";
+                    break;
+                case "11" :
+                    valueArr[2] ="12";
+                    break;
+                case "12" :
+                    valueArr[2] ="Mezun";
+                    break;
+            } // [Ali, Can, 12, H, MF]
+
+            //    2- bilgiye ulasmak icin parcaladigimiz value'yu yeni haliyle tekrar birlestiririz
+            String yeniValue= valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+valueArr[3]+"-"+valueArr[4];
+            //       "Ali-Can-12-H-MF"
+
+
+            //    3- key ve yeni value'yu kullanarak, map'i update ederiz
+
+            ogrenciMap.put(eachKey,yeniValue);
+
+        }
+
+
+         return ogrenciMap;
+
+
+    }
 }
 
 
